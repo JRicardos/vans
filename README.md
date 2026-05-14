@@ -59,7 +59,8 @@ Este projeto e destinado a:
 
 ```text
 vans/
-  apps/
+  frontend/
+    README.md
     mobile/
       src/
         App.tsx
@@ -67,20 +68,34 @@ vans/
         main.tsx
         index.css
       package.json
-  GUIA_ALUNOS_GIT_E_LOCALHOST.md
-  PLANO_DISCIPLINAS_VANROTAS.md
-  PROJETO_SISTEMA_VANROTAS.md
-  PRD-VanRotas (1).md
+  backend/
+    README.md
+    api/
+      README.md
+  docs/
+    GUIA_ALUNOS_GIT_E_LOCALHOST.md
+    PLANO_DISCIPLINAS_VANROTAS.md
+    PROJETO_SISTEMA_VANROTAS.md
+    PRD-VanRotas (1).md
   README.md
+  vercel.json
 ```
 
 ### Arquivos importantes
 
-- `PRD-VanRotas (1).md`: documento original de produto.
-- `PROJETO_SISTEMA_VANROTAS.md`: arquitetura e desenho tecnico do sistema.
-- `PLANO_DISCIPLINAS_VANROTAS.md`: planejamento das trilhas de Frontend e Backend.
-- `GUIA_ALUNOS_GIT_E_LOCALHOST.md`: passo a passo para clonar, rodar e colaborar no projeto.
-- `apps/mobile`: aplicacao frontend atual.
+- `docs/PRD-VanRotas (1).md`: documento original de produto.
+- `docs/PROJETO_SISTEMA_VANROTAS.md`: arquitetura e desenho tecnico do sistema.
+- `docs/PLANO_DISCIPLINAS_VANROTAS.md`: planejamento das trilhas de Frontend e Backend.
+- `docs/GUIA_ALUNOS_GIT_E_LOCALHOST.md`: passo a passo para clonar, rodar e colaborar no projeto.
+- `frontend/mobile`: aplicacao frontend atual.
+- `backend/api`: pasta reservada para a API Express.
+
+### Separacao por turma
+
+- Alunos de **Frontend** devem trabalhar em `frontend/`.
+- Alunos de **Backend** devem trabalhar em `backend/`.
+- Documentos compartilhados ficam em `docs/`.
+- Alteracoes fora da pasta da sua turma devem ser combinadas antes com o professor ou com a outra turma.
 
 ---
 
@@ -113,7 +128,7 @@ ou abra manualmente a pasta pelo editor.
 Entre na pasta do app mobile:
 
 ```bash
-cd apps/mobile
+cd frontend/mobile
 ```
 
 Instale as dependencias:
@@ -190,7 +205,7 @@ http://127.0.0.1:5174/admin
 
 ## Comandos uteis
 
-Dentro de `apps/mobile`:
+Dentro de `frontend/mobile`:
 
 ```bash
 npm run dev
@@ -293,7 +308,7 @@ Foco em:
 O planejamento completo esta em:
 
 ```text
-PLANO_DISCIPLINAS_VANROTAS.md
+docs/PLANO_DISCIPLINAS_VANROTAS.md
 ```
 
 ---
@@ -303,19 +318,19 @@ PLANO_DISCIPLINAS_VANROTAS.md
 Leia estes arquivos antes de contribuir:
 
 ```text
-GUIA_ALUNOS_GIT_E_LOCALHOST.md
-PRD-VanRotas (1).md
-PROJETO_SISTEMA_VANROTAS.md
-PLANO_DISCIPLINAS_VANROTAS.md
+docs/GUIA_ALUNOS_GIT_E_LOCALHOST.md
+docs/PRD-VanRotas (1).md
+docs/PROJETO_SISTEMA_VANROTAS.md
+docs/PLANO_DISCIPLINAS_VANROTAS.md
 ```
 
 Ordem sugerida para alunos:
 
-1. `GUIA_ALUNOS_GIT_E_LOCALHOST.md`
+1. `docs/GUIA_ALUNOS_GIT_E_LOCALHOST.md`
 2. `README.md`
-3. `PRD-VanRotas (1).md`
-4. `PLANO_DISCIPLINAS_VANROTAS.md`
-5. `PROJETO_SISTEMA_VANROTAS.md`
+3. `docs/PRD-VanRotas (1).md`
+4. `docs/PLANO_DISCIPLINAS_VANROTAS.md`
+5. `docs/PROJETO_SISTEMA_VANROTAS.md`
 
 ---
 
@@ -323,7 +338,7 @@ Ordem sugerida para alunos:
 
 Ja foi implementado:
 
-- Base React + TypeScript + Vite em `apps/mobile`.
+- Base React + TypeScript + Vite em `frontend/mobile`.
 - Interface mobile-first inspirada em iOS.
 - Rotas com React Router.
 - Telas iniciais para passageiro, motorista, admin, rota, pagamentos e perfil.
@@ -336,7 +351,7 @@ Proximos passos sugeridos:
 - Refatorar `App.tsx` em componentes e paginas.
 - Criar pasta `components`.
 - Criar pasta `pages`.
-- Criar `apps/api` para o backend Express.
+- Criar `backend/api` para o backend Express.
 - Definir contratos REST iniciais.
 - Conectar frontend a endpoints mockados.
 

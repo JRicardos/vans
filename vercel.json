@@ -1,7 +1,7 @@
 {
-  "installCommand": "cd apps/mobile && npm install",
-  "buildCommand": "cd apps/mobile && npm run build",
-  "outputDirectory": "apps/mobile/dist",
+  "installCommand": "cd frontend/mobile && npm install",
+  "buildCommand": "cd frontend/mobile && npm run build",
+  "outputDirectory": "frontend/mobile/dist",
   "rewrites": [
     {
       "source": "/(.*)",

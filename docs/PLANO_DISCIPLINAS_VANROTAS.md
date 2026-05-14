@@ -127,15 +127,16 @@ Manter monorepo simples:
 
 ```text
 vans/
-  apps/
+  frontend/
     mobile/
+  backend/
     api/
 ```
 
 Estrutura esperada:
 
-- `apps/mobile`: projeto React + TypeScript + Vite.
-- `apps/api`: backend Express + TypeScript.
+- `frontend/mobile`: projeto React + TypeScript + Vite.
+- `backend/api`: backend Express + TypeScript.
 
 Fluxo recomendado:
 
@@ -208,7 +209,7 @@ Refatorar `App.tsx` em componentes e paginas.
 Sugestao de estrutura:
 
 ```text
-apps/mobile/src/
+frontend/mobile/src/
   components/
     BottomTabs.tsx
     HeroCard.tsx
@@ -234,12 +235,12 @@ Objetivos:
 
 ### Backend
 
-Criar `apps/api` com Express.
+Criar `backend/api` com Express.
 
 Sugestao de estrutura:
 
 ```text
-apps/api/
+backend/api/
   src/
     server.ts
     app.ts
@@ -325,7 +326,7 @@ Foco em:
 
 ### Backlog Backend
 
-- Criar `apps/api`.
+- Criar `backend/api`.
 - Configurar Express + TypeScript.
 - Criar `GET /health`.
 - Criar `GET /me`.

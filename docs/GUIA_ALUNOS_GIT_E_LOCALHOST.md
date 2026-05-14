@@ -142,17 +142,17 @@ cursor .
 Neste momento, a parte principal que vamos visualizar esta em:
 
 ```text
-apps/mobile
+frontend/mobile
 ```
 
 Arquivos importantes:
 
 ```text
-apps/mobile/src/App.tsx
-apps/mobile/src/App.css
-apps/mobile/src/main.tsx
-apps/mobile/src/index.css
-apps/mobile/package.json
+frontend/mobile/src/App.tsx
+frontend/mobile/src/App.css
+frontend/mobile/src/main.tsx
+frontend/mobile/src/index.css
+frontend/mobile/package.json
 ```
 
 O frontend foi criado com:
@@ -162,6 +162,13 @@ O frontend foi criado com:
 - Vite
 - React Router
 
+Separacao para as turmas:
+
+- Turma de **Frontend**: trabalhar em `frontend/`.
+- Turma de **Backend**: trabalhar em `backend/`.
+- Documentacao compartilhada: consultar e atualizar `docs/`.
+- Alteracoes fora da pasta da sua turma devem ser combinadas antes.
+
 ---
 
 ## 7. Instalar as dependencias do frontend
@@ -169,7 +176,7 @@ O frontend foi criado com:
 Dentro da raiz do projeto `vans`, entre na pasta do app mobile:
 
 ```bash
-cd apps/mobile
+cd frontend/mobile
 ```
 
 Instale as dependencias:
@@ -186,7 +193,7 @@ Importante: a pasta `node_modules` nao deve ser enviada para o GitHub.
 
 ## 8. Abrir o projeto no localhost
 
-Ainda dentro de `apps/mobile`, rode:
+Ainda dentro de `frontend/mobile`, rode:
 
 ```bash
 npm run dev
@@ -428,7 +435,7 @@ Se tiver duvida, chame o professor antes de apagar codigo.
 
 ## 15. Comandos para validar o frontend
 
-Dentro de `apps/mobile`, rode:
+Dentro de `frontend/mobile`, rode:
 
 ```bash
 npm run lint
@@ -506,7 +513,7 @@ git checkout -b frontend-ajuste-navbar
 Entrar no frontend:
 
 ```bash
-cd apps/mobile
+cd frontend/mobile
 ```
 
 Instalar dependencias, se ainda nao instalou:
