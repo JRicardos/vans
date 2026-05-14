@@ -203,6 +203,29 @@ http://127.0.0.1:5174/admin
 
 ---
 
+## Configuracao da Vercel
+
+Como o projeto esta organizado em pastas separadas, a Vercel deve apontar para o frontend.
+
+Configuracao recomendada no painel da Vercel:
+
+```text
+Root Directory: frontend/mobile
+Install Command: npm install
+Build Command: npm run build
+Output Directory: dist
+```
+
+Nao use `cd frontend/mobile` nos comandos da Vercel se o **Root Directory** ja estiver configurado como `frontend/mobile`.
+
+O dominio de producao atual e:
+
+```text
+https://vans-ueg.vercel.app
+```
+
+---
+
 ## Comandos uteis
 
 Dentro de `frontend/mobile`:
