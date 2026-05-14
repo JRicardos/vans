@@ -1,0 +1,51 @@
+:root {
+  --app-bg: #eef2f7;
+  --brand: #0a84ff;
+  --brand-strong: #0066d6;
+  --brand-soft: rgba(10, 132, 255, 0.12);
+  --card-shadow: 0 18px 45px rgba(31, 41, 55, 0.08);
+  --map-bg: #dcecf8;
+  --map-line: rgba(29, 78, 216, 0.12);
+  --muted: #7b8494;
+  --phone-bg: #f7f8fb;
+  --phone-border: rgba(15, 23, 42, 0.08);
+  --row-bg: #f6f7fa;
+  --screen-shadow: 0 28px 90px rgba(15, 23, 42, 0.22);
+  --segmented-bg: #e9edf3;
+  --soft-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  --surface: rgba(255, 255, 255, 0.92);
+  --surface-border: rgba(15, 23, 42, 0.06);
+  --surface-strong: #ffffff;
+  --text-primary: #101828;
+
+  background: var(--app-bg);
+  color: var(--text-primary);
+  color-scheme: light;
+  font: 16px/1.45 -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI',
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}

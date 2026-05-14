@@ -1,0 +1,520 @@
+.app-shell {
+  align-items: center;
+  display: grid;
+  gap: 56px;
+  grid-template-columns: minmax(320px, 430px) minmax(280px, 420px);
+  justify-content: center;
+  min-height: 100svh;
+  padding: 48px 24px;
+}
+
+.phone-preview {
+  background: var(--phone-bg);
+  border: 1px solid var(--phone-border);
+  border-radius: 44px;
+  box-shadow: var(--screen-shadow);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 880px;
+  max-width: 430px;
+  overflow: auto;
+  padding: 18px;
+  position: relative;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.phone-preview::-webkit-scrollbar {
+  display: none;
+}
+
+.status-bar,
+.section-title,
+.button-row,
+.bottom-tabs,
+.admin-strip {
+  align-items: center;
+  display: flex;
+}
+
+.status-bar {
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 700;
+  justify-content: space-between;
+  padding: 0 14px 2px;
+}
+
+.hero-card,
+.action-card,
+.mini-card,
+.list-card,
+.driver-panel {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 28px;
+  box-shadow: var(--card-shadow);
+}
+
+.hero-card {
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.34), transparent 28%),
+    linear-gradient(135deg, var(--brand), var(--brand-strong));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  min-height: 150px;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.hero-card h1,
+.product-notes h2,
+.action-card h2,
+.section-title h2 {
+  margin: 0;
+}
+
+.hero-card h1 {
+  color: white;
+  font-size: 34px;
+  letter-spacing: -1px;
+  line-height: 0.96;
+  max-width: 250px;
+}
+
+.hero-copy {
+  color: rgba(255, 255, 255, 0.78);
+  margin-top: 10px;
+  max-width: 230px;
+}
+
+.eyebrow,
+.card-kicker {
+  color: var(--muted);
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-card .eyebrow {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.live-pill {
+  align-items: center;
+  align-self: flex-start;
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 800;
+  gap: 7px;
+  padding: 7px 10px;
+}
+
+.pulse-dot {
+  background: #7dffaf;
+  border-radius: 999px;
+  height: 8px;
+  width: 8px;
+}
+
+.role-switcher {
+  background: var(--segmented-bg);
+  border-radius: 18px;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 4px;
+}
+
+button {
+  font: inherit;
+}
+
+.role-button,
+.tab,
+.ios-button,
+.small-button {
+  border: 0;
+  cursor: pointer;
+}
+
+.role-button {
+  background: transparent;
+  border-radius: 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 10px 8px;
+  text-transform: capitalize;
+}
+
+.role-button.active {
+  background: var(--surface);
+  box-shadow: var(--soft-shadow);
+  color: var(--text-primary);
+}
+
+.map-card {
+  background: var(--map-bg);
+  border-radius: 30px;
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-grid {
+  background-image:
+    linear-gradient(var(--map-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--map-line) 1px, transparent 1px);
+  background-size: 42px 42px;
+  inset: 0;
+  opacity: 0.7;
+  position: absolute;
+}
+
+.route-line {
+  border: 6px solid var(--brand);
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0 46px 0 0;
+  height: 128px;
+  left: 86px;
+  position: absolute;
+  top: 64px;
+  transform: rotate(-8deg);
+  width: 220px;
+}
+
+.van-marker,
+.stop-marker {
+  position: absolute;
+}
+
+.van-marker {
+  align-items: center;
+  background: var(--brand-strong);
+  border: 4px solid white;
+  border-radius: 18px;
+  box-shadow: var(--soft-shadow);
+  color: white;
+  display: flex;
+  font-size: 14px;
+  font-weight: 900;
+  height: 42px;
+  justify-content: center;
+  left: 94px;
+  top: 58px;
+  width: 42px;
+}
+
+.stop-marker {
+  background: white;
+  border: 5px solid var(--brand);
+  border-radius: 999px;
+  height: 14px;
+  width: 14px;
+}
+
+.stop-marker.first {
+  right: 108px;
+  top: 64px;
+}
+
+.stop-marker.second {
+  bottom: 44px;
+  right: 78px;
+}
+
+.eta-card {
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  bottom: 14px;
+  color: var(--text-primary);
+  display: grid;
+  gap: 2px;
+  left: 14px;
+  padding: 12px 14px;
+  position: absolute;
+}
+
+.eta-card strong {
+  font-size: 18px;
+}
+
+.eta-card span,
+.mini-card p,
+.stop-row p,
+.driver-stop p,
+.product-notes p,
+.note-list span,
+.admin-strip span {
+  color: var(--muted);
+}
+
+.action-card,
+.list-card,
+.driver-panel {
+  padding: 18px;
+}
+
+.primary-action {
+  display: grid;
+  gap: 16px;
+}
+
+.action-card h2,
+.section-title h2 {
+  color: var(--text-primary);
+  font-size: 20px;
+  letter-spacing: -0.3px;
+}
+
+.button-row {
+  gap: 10px;
+}
+
+.ios-button {
+  border-radius: 17px;
+  flex: 1;
+  font-weight: 850;
+  padding: 13px 14px;
+}
+
+.ios-button.primary {
+  background: var(--brand);
+  color: white;
+}
+
+.ios-button.secondary {
+  background: var(--segmented-bg);
+  color: var(--text-primary);
+}
+
+.content-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mini-card {
+  min-height: 104px;
+  padding: 16px;
+}
+
+.mini-card strong,
+.stop-row strong,
+.driver-stop strong,
+.admin-strip strong,
+.note-list strong {
+  color: var(--text-primary);
+  display: block;
+}
+
+.mini-card p,
+.stop-row p,
+.driver-stop p {
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.section-title {
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.section-title a {
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.stop-list {
+  display: grid;
+  gap: 10px;
+}
+
+.stop-row,
+.driver-stop {
+  align-items: center;
+  background: var(--row-bg);
+  border-radius: 18px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: auto 1fr auto;
+  padding: 12px;
+}
+
+.stop-number {
+  align-items: center;
+  background: white;
+  border-radius: 14px;
+  color: var(--brand);
+  display: flex;
+  font-size: 13px;
+  font-weight: 900;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.stop-row time {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.driver-panel {
+  background: var(--surface-strong);
+}
+
+.small-button {
+  background: var(--brand);
+  border-radius: 999px;
+  color: white;
+  font-size: 13px;
+  font-weight: 850;
+  padding: 8px 12px;
+}
+
+.driver-stop {
+  grid-template-columns: 1fr auto;
+  margin-top: 10px;
+}
+
+.driver-stop span {
+  background: var(--surface);
+  border-radius: 999px;
+  color: var(--brand);
+  font-size: 12px;
+  font-weight: 850;
+  padding: 7px 10px;
+}
+
+.admin-strip {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 24px;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.admin-strip div {
+  display: grid;
+  gap: 3px;
+}
+
+.admin-strip strong {
+  font-size: 19px;
+}
+
+.admin-strip span {
+  font-size: 11px;
+}
+
+.bottom-tabs {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--surface-border);
+  border-radius: 26px;
+  bottom: 14px;
+  box-shadow: var(--soft-shadow);
+  gap: 4px;
+  justify-content: space-around;
+  margin-top: 2px;
+  padding: 8px;
+  position: sticky;
+}
+
+.tab {
+  background: transparent;
+  border-radius: 18px;
+  color: var(--muted);
+  flex: 1;
+  font-size: 12px;
+  font-weight: 850;
+  padding: 10px 4px;
+}
+
+.tab.active {
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+
+.product-notes {
+  max-width: 430px;
+}
+
+.product-notes h2 {
+  color: var(--text-primary);
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  letter-spacing: -0.06em;
+  line-height: 0.94;
+  margin-top: 10px;
+}
+
+.product-notes p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-top: 22px;
+}
+
+.note-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.note-list div {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 22px;
+  padding: 16px;
+}
+
+.note-list span {
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    padding: 18px 14px 40px;
+  }
+
+  .product-notes {
+    order: -1;
+  }
+
+  .phone-preview {
+    border-radius: 34px;
+  }
+}
+
+@media (max-width: 420px) {
+  .phone-preview {
+    border-left: 0;
+    border-radius: 0;
+    border-right: 0;
+    max-height: none;
+    padding: 14px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
