@@ -145,15 +145,18 @@ button {
 .small-button {
   border: 0;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .role-button {
   background: transparent;
   border-radius: 14px;
   color: var(--muted);
+  display: block;
   font-size: 13px;
   font-weight: 800;
   padding: 10px 8px;
+  text-align: center;
   text-transform: capitalize;
 }
 
@@ -445,6 +448,7 @@ button {
   font-size: 12px;
   font-weight: 850;
   padding: 10px 4px;
+  text-align: center;
 }
 
 .tab.active {
@@ -488,6 +492,32 @@ button {
   font-size: 14px;
   line-height: 1.5;
   margin-top: 4px;
+}
+
+.route-page {
+  min-height: 310px;
+}
+
+.payment-summary {
+  background: var(--brand-soft);
+  border-radius: 24px;
+  display: grid;
+  gap: 4px;
+  margin-bottom: 12px;
+  padding: 18px;
+}
+
+.payment-summary strong {
+  color: var(--brand);
+  font-size: 34px;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.payment-summary span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 750;
 }
 
 @media (max-width: 900px) {
